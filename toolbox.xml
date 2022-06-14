@@ -1,0 +1,372 @@
+<xml>
+	<category name="Display" colour="0" expanded="true">
+		<category name="Object3D" colour="355">
+			<block type="mesh_create"></block>
+			<block type="light_new">
+				<value name="color">
+					<block type="color_new_input">
+						<field name="color">#fff</field>
+					</block>
+				</value>
+				<value name="intensity">
+					<block type="number">
+						<field name="value">1</field>
+					</block>
+				</value>
+			</block>
+			<block type="object3d_material_get"></block>
+			<block type="object3d_geometry_get"></block>
+			<block type="object3d_position_set">
+				<value name="x"><block type="number"></block></value>
+				<value name="y"><block type="number"></block></value>
+				<value name="z"><block type="number"></block></value>
+			</block>
+			<block type="object3d_position_set_x">
+				<value name="value"><block type="number"></block></value>
+			</block>
+			<block type="object3d_position_set_y">
+				<value name="value"><block type="number"></block></value>
+			</block>
+			<block type="object3d_position_set_z">
+				<value name="value"><block type="number"></block></value>
+			</block>
+			<block type="object3d_position_get"></block>
+			<block type="object3d_position_get_x"></block>
+			<block type="object3d_position_get_y"></block>
+			<block type="object3d_position_get_z"></block>
+			<block type="object3d_rotation_set">
+				<value name="x"><block type="number"></block></value>
+				<value name="y"><block type="number"></block></value>
+				<value name="z"><block type="number"></block></value>
+			</block>
+			<block type="object3d_rotation_set_x">
+				<value name="value"><block type="number"></block></value>
+			</block>
+			<block type="object3d_rotation_set_y">
+				<value name="value"><block type="number"></block></value>
+			</block>
+			<block type="object3d_rotation_set_z">
+				<value name="value"><block type="number"></block></value>
+			</block>
+			<block type="object3d_lookat"></block>
+			<block type="object3d_lookat_coordinates"></block>
+			<block type="object3d_rotation_get_x"></block>
+			<block type="object3d_rotation_get_y"></block>
+			<block type="object3d_rotation_get_z"></block>
+			<block type="object3d_shadow_cast_set">
+				<value name="value">
+					<block type="boolean"></block>
+				</value>
+			</block>
+			<block type="object3d_shadow_cast_get"></block>
+			<block type="object3d_shadow_receive_set">
+				<value name="value">
+					<block type="boolean"></block>
+				</value>
+			</block>
+			<block type="object3d_shadow_receive_get"></block>
+		</category>
+		<category name="Geometry" colour="345">
+			<block type="geometry_box">
+				<value name="width">
+					<block type="number">
+						<field name="value">1</field>
+					</block>
+				</value>
+				<value name="height">
+					<block type="number">
+						<field name="value">1</field>
+					</block>
+				</value>
+				<value name="depth">
+					<block type="number">
+						<field name="value">1</field>
+					</block>
+				</value>
+			</block>
+			<block type="geometry_prism">
+				<value name="radius">
+					<block type="number">
+						<field name="value">1</field>
+					</block>
+				</value>
+				<value name="height">
+					<block type="number">
+						<field name="value">1</field>
+					</block>
+				</value>
+				<value name="segments">
+					<block type="number">
+						<field name="value">3</field>
+					</block>
+				</value>
+			</block>
+			<block type="geometry_sphere">
+				<value name="radius">
+					<block type="number">
+						<field name="value">1</field>
+					</block>
+				</value>
+			</block>
+			<block type="geometry_cone">
+				<value name="radius">
+					<block type="number">
+						<field name="value">1</field>
+					</block>
+				</value>
+				<value name="height">
+					<block type="number">
+						<field name="value">1</field>
+					</block>
+				</value>
+			</block>
+			<block type="geometry_dodecahedron">
+				<value name="radius">
+					<block type="number">
+						<field name="value">1</field>
+					</block>
+				</value>
+			</block>
+			<block type="geometry_capsule">
+				<value name="radius">
+					<block type="number">
+						<field name="value">1</field>
+					</block>
+				</value>
+				<value name="length">
+					<block type="number">
+						<field name="value">1</field>
+					</block>
+				</value>
+			</block>
+			<block type="geometry_circle">
+				<value name="radius">
+					<block type="number">
+						<field name="value">1</field>
+					</block>
+				</value>
+			</block>
+		</category>
+		<category name="Material" colour="330">
+			<block type="material_new">
+				<value name="color">
+					<block type="color_new_input"></block>
+				</value>
+				<value name="specular">
+					<block type="color_new_input">
+						<field name="color">#fff</field>
+					</block>
+				</value>
+				<value name="shininess">
+					<block type="number">
+						<field name="value">20</field>
+					</block>
+				</value>
+			</block>
+			<block type="texture_new">
+				<value name="url">
+					<block type="text_string">
+						<field name="text">https://media.istockphoto.com/photos/concrete-texture-picture-id486651796</field>
+					</block>
+				</value>
+			</block>
+		</category>
+		<category name="Scene" colour="300">
+			<block type="camera_get"></block>
+			<block type="camera_fov_set"></block>
+			<block type="camera_fov_get"></block>
+			<block type="scene_add"></block>
+			<block type="scene_remove"></block>
+			<block type="clone_three_object"></block>
+			<block type="scene_background_set"></block>
+			<block type="scene_background_get"></block>
+		</category>
+		<category name="Color" colour="285">
+			<block type="color_new_input"></block>
+			<block type="color_new_rgb">
+				<value name="r"><block type="number"></block></value>
+				<value name="g"><block type="number"></block></value>
+				<value name="b"><block type="number"></block></value>
+			</block>
+			<block type="color_new_hex">
+				<value name="r"><block type="number"></block></value>
+			</block>
+			<block type="color_new_str">
+				<value name="r">
+					<block type="text_string">
+						<field name="text">#000</field>
+					</block>
+				</value>
+			</block>
+			<block type="color_get_r"></block>
+			<block type="color_get_g"></block>
+			<block type="color_get_b"></block>
+			<block type="color_convert_array"></block>
+			<block type="color_comparison"></block>
+			<block type="color_lerp">
+				<value name="alpha">
+					<block type="number">
+						<field name="value">.5</field>
+					</block>
+				</value>
+			</block>
+			<block type="color_multiply">
+				<value name="scalar">
+					<block type="number">
+						<field name="value">1.5</field>
+					</block>
+				</value>
+			</block>
+		</category>
+	</category>
+	<category name="Control" colour="90">
+		<block type="wait">
+			<value name="seconds">
+				<block type="number">
+					<field name="value">1</field>
+				</block>
+			</value>
+		</block>
+		<block type="if"></block>
+		<block type="if_else"></block>
+		<block type="repeat">
+			<value name="times">
+				<block type="number">
+					<field name="value">10</field>
+				</block>
+			</value>
+		</block>
+		<block type="for_array"></block>
+		<block type="iterator_get"></block>
+		<block type="iterator_set"></block>
+		<block type="while"></block>
+		<block type="until"></block>
+		<block type="do_while"></block>
+		<block type="forever"></block>
+	</category>
+	<sep></sep>
+	<category name="Array" colour="15">
+		<block type="array_new">
+			<value name="length">
+				<block type="number"></block>
+			</value>
+		</block>
+		<block type="array_push"></block>
+		<block type="array_unshift"></block>
+		<block type="array_pop"></block>
+		<block type="array_shift"></block>
+		<block type="length"></block>
+		<block type="array_set">
+			<value name="index">
+				<block type="number"></block>
+			</value>
+		</block>
+		<block type="array_get">
+			<value name="index">
+				<block type="number"></block>
+			</value>
+		</block>
+		<block type="array_splice">
+			<value name="remove_elements_count">
+				<block type="number">
+					<field name="value">1</field>
+				</block>
+			</value>
+			<value name="remove_index">
+				<block type="number"></block>
+			</value>
+			<value name="add_elements">
+				<block type="array_new">
+					<value name="length">
+						<block type="number"></block>
+					</value>
+				</block>
+			</value>
+		</block>
+		<block type="array_slice">
+			<value name="start">
+				<block type="number"></block>
+			</value>
+			<value name="end">
+				<block type="number">
+					<field name="value">1</field>
+				</block>
+			</value>
+		</block>
+	</category>
+	<category name="Object" colour="45">
+		<block type="object_new"></block>
+		<block type="object_get">
+			<value name="property">
+				<block type="text_string"></block>
+			</value>
+		</block>
+		<block type="object_set">
+			<value name="property">
+				<block type="text_string"></block>
+			</value>
+		</block>
+		<block type="object_remove">
+			<value name="property">
+				<block type="text_string"></block>
+			</value>
+		</block>
+		<block type="object_keys_values"></block>
+	</category>
+	<category name="Function" colour="69">
+		<block type="function"></block>
+		<block type="call_function"></block>
+		<block type="function_arguments"></block>
+		<block type="return"></block>
+		<block type="return_undefined"></block>
+	</category>
+	<category name="Text" colour="160">
+		<block type="text_string"></block>
+		<block type="text_join"></block>
+		<block type="string_contains"></block>
+		<block type="length"></block>
+		<block type="text_substr">
+			<value name="start">
+				<block type="number"></block>
+			</value>
+			<value name="end">
+				<block type="number">
+					<field name="value">1</field>
+				</block>
+			</value>
+		</block>
+		<block type="char_code">
+			<value name="pos">
+				<block type="number"></block>
+			</value>
+		</block>
+	</category>
+	<category name="Logic" colour="%{BKY_LOGIC_HUE}">
+		<block type="boolean"></block>
+		<block type="not"></block>
+		<block type="to_boolean"></block>
+		<block type="logical_operator"></block>
+	</category>
+	<category name="Math" colour="230">
+		<block type="number"></block>
+		<block type="operator"></block>
+		<block type="math_function"></block>
+		<block type="degrees_radians"></block>
+		<block type="number_from_text"></block>
+		<block type="integer_from_text"></block>
+	</category>
+	<category name="Types" colour="#808080">
+		<block type="null"></block>
+		<block type="typeof"></block>
+	</category>
+	<sep></sep>
+	<category name="Variables" custom="VARIABLE" colour="#000000"></category>
+	<category name="Advanced" colour="270">
+		<block type="void"></block>
+		<block type="custom_code"></block>
+		<block type="custom_code_inline"></block>
+		<block type="console"></block>
+		<block type="console_group"></block>
+		<block type="console_ungroup"></block>
+	</category>
+</xml>

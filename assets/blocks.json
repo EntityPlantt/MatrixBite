@@ -1,0 +1,2335 @@
+[{
+  "type": "number",
+  "message0": "%1",
+  "args0": [
+    {
+      "type": "field_number",
+      "name": "value",
+      "value": 0
+    }
+  ],
+  "output": "Number",
+  "colour": 230,
+  "tooltip": "A static number",
+  "helpUrl": ""
+},
+{
+  "type": "operator",
+  "message0": "%1 %2 %3 %4",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "num1",
+      "check": "Number"
+    },
+    {
+      "type": "field_dropdown",
+      "name": "operator",
+      "options": [
+        [
+          "+",
+          "+"
+        ],
+        [
+          "-",
+          "-"
+        ],
+        [
+          "*",
+          "*"
+        ],
+        [
+          "/",
+          "/"
+        ],
+        [
+          "mod",
+          "%"
+        ],
+        [
+          "^",
+          "**"
+        ]
+      ]
+    },
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "num2",
+      "check": "Number"
+    }
+  ],
+  "inputsInline": true,
+  "output": "Number",
+  "colour": 230,
+  "tooltip": "Do operations between numbers",
+  "helpUrl": ""
+},
+{
+  "type": "number_from_text",
+  "message0": "number from text %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "text",
+      "check": "String"
+    }
+  ],
+  "inputsInline": false,
+  "output": "Number",
+  "colour": 230,
+  "tooltip": "Convert text to number, as they are different types",
+  "helpUrl": ""
+},
+{
+  "type": "integer_from_text",
+  "message0": "Integer from text %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "text",
+      "check": "String"
+    }
+  ],
+  "inputsInline": false,
+  "output": "Number",
+  "colour": 230,
+  "tooltip": "Convert text to integer, as they are different types",
+  "helpUrl": ""
+},
+{
+  "type": "text_join",
+  "message0": "%1 + %2",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "text_1",
+      "check": "String"
+    },
+    {
+      "type": "input_value",
+      "name": "text_2",
+      "check": "String"
+    }
+  ],
+  "inputsInline": true,
+  "output": "String",
+  "colour": 160,
+  "tooltip": "Join two strings",
+  "helpUrl": ""
+},
+{
+  "type": "text_substr",
+  "message0": "Substring of %1 start pos. %2 %3 end pos. %4",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "text",
+      "check": "String"
+    },
+    {
+      "type": "input_value",
+      "name": "start",
+      "check": "Number"
+    },
+    {
+      "type": "field_checkbox",
+      "name": "end_enabled",
+      "checked": true
+    },
+    {
+      "type": "input_value",
+      "name": "end",
+      "check": "Number"
+    }
+  ],
+  "inputsInline": true,
+  "output": "String",
+  "colour": 160,
+  "tooltip": "Cut out some characters from a string",
+  "helpUrl": ""
+},
+{
+  "type": "logical_operator",
+  "message0": "%1 %2 %3 %4",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "val1"
+    },
+    {
+      "type": "field_dropdown",
+      "name": "operator",
+      "options": [
+        [
+          "=",
+          "=="
+        ],
+        [
+          "<",
+          "<"
+        ],
+        [
+          "≤",
+          "<="
+        ],
+        [
+          ">",
+          ">"
+        ],
+        [
+          "≥",
+          ">="
+        ],
+        [
+          "and",
+          "&&"
+        ],
+        [
+          "or",
+          "||"
+        ]
+      ]
+    },
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "val2"
+    }
+  ],
+  "inputsInline": true,
+  "output": "Boolean",
+  "colour": 210,
+  "tooltip": "Compare two values",
+  "helpUrl": ""
+},
+{
+  "type": "boolean",
+  "message0": "%1",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "value",
+      "options": [
+        [
+          "true",
+          "true"
+        ],
+        [
+          "false",
+          "false"
+        ]
+      ]
+    }
+  ],
+  "inputsInline": true,
+  "output": "Boolean",
+  "colour": 210,
+  "tooltip": "A logical static value",
+  "helpUrl": ""
+},
+{
+  "type": "not",
+  "message0": "not %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "value",
+      "check": "Boolean"
+    }
+  ],
+  "inputsInline": false,
+  "output": "Boolean",
+  "colour": 210,
+  "tooltip": "Inverse boolean value",
+  "helpUrl": ""
+},
+{
+  "type": "text_string",
+  "message0": "%1 %2 %3",
+  "args0": [
+    {
+      "type": "field_image",
+      "src": "assets/quotes_lower.png",
+      "width": 15,
+      "height": 15,
+      "alt": "\"",
+      "flipRtl": false
+    },
+    {
+      "type": "field_input",
+      "name": "text",
+      "text": ""
+    },
+    {
+      "type": "field_image",
+      "src": "assets/quotes_upper.png",
+      "width": 15,
+      "height": 15,
+      "alt": "\"",
+      "flipRtl": false
+    }
+  ],
+  "output": "String",
+  "colour": 160,
+  "tooltip": "",
+  "helpUrl": ""
+},
+{
+  "type": "length",
+  "message0": "length of %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "text",
+      "check": ["String", "Array"]
+    }
+  ],
+  "inputsInline": false,
+  "output": "String",
+  "colour": 230,
+  "tooltip": "Returns the number of characters in the text",
+  "helpUrl": ""
+},
+{
+  "type": "console",
+  "message0": "Log with log level %1 %2",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "level",
+      "options": [
+        [
+          "info",
+          "log"
+        ],
+        [
+          "warning",
+          "warn"
+        ],
+        [
+          "error",
+          "error"
+        ]
+      ]
+    },
+    {
+      "type": "input_value",
+      "name": "data"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 270,
+  "tooltip": "Log something in the console with a special log level",
+  "helpUrl": ""
+},
+{
+  "type": "console_group",
+  "message0": "Create log group %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "NAME",
+      "check": "String"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 270,
+  "tooltip": "Group the next console logs",
+  "helpUrl": ""
+},
+{
+  "type": "console_ungroup",
+  "message0": "Delete last-created log group",
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 270,
+  "tooltip": "Ungroup the next console logs",
+  "helpUrl": ""
+},
+{
+  "type": "math_function",
+  "message0": "%1 of %2",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "NAME",
+      "options": [
+        [
+          "absolute value",
+          "abs"
+        ],
+        [
+          "nearest integer",
+          "round"
+        ],
+        [
+          "floor",
+          "floor"
+        ],
+        [
+          "ceiling",
+          "ceil"
+        ],
+        [
+          "square root",
+          "sqrt"
+        ],
+        [
+          "cube root",
+          "cbrt"
+        ],
+        [
+          "sine",
+          "sin"
+        ],
+        [
+          "cosine",
+          "cos"
+        ],
+        [
+          "tangent",
+          "tan"
+        ],
+        [
+          "arcus sine",
+          "asin"
+        ],
+        [
+          "arcus cosine",
+          "acos"
+        ],
+        [
+          "arcus tangent",
+          "atan"
+        ]
+      ]
+    },
+    {
+      "type": "input_value",
+      "name": "value",
+      "check": "Number"
+    }
+  ],
+  "output": "Number",
+  "colour": 230,
+  "tooltip": "Let's do some trigonometric functions!",
+  "helpUrl": ""
+},
+{
+  "type": "degrees_radians",
+  "message0": "Convert from %1 %2",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "path",
+      "options": [
+        [
+          "radians to degrees",
+          "* 180 / Math.PI"
+        ],
+        [
+          "degrees to radians",
+          "/ 180 * Math.PI"
+        ]
+      ]
+    },
+    {
+      "type": "input_value",
+      "name": "value",
+      "check": "Number"
+    }
+  ],
+  "output": "Number",
+  "colour": 230,
+  "tooltip": "Convert degrees to radians and radians to degrees",
+  "helpUrl": ""
+},
+{
+  "type": "string_contains",
+  "message0": "is %1 a substring of %2",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "substr",
+      "check": "String"
+    },
+    {
+      "type": "input_value",
+      "name": "string",
+      "check": "String"
+    }
+  ],
+  "inputsInline": true,
+  "output": "Boolean",
+  "colour": 210,
+  "tooltip": "Check if a string is a substring of the other string",
+  "helpUrl": ""
+},
+{
+  "type": "char_code",
+  "message0": "Character code at position %1 of %2",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "pos",
+      "check": "Number"
+    },
+    {
+      "type": "input_value",
+      "name": "text",
+      "check": "String"
+    }
+  ],
+  "inputsInline": true,
+  "output": "Number",
+  "colour": 230,
+  "tooltip": "Get character ASCII code; position is zero-based",
+  "helpUrl": ""
+},
+{
+  "type": "if",
+  "message0": "if %1 %2",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "condition",
+      "check": "Boolean"
+    },
+    {
+      "type": "input_statement",
+      "name": "statement"
+    }
+  ],
+  "inputsInline": false,
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 90,
+  "tooltip": "Do some code if the condition is true",
+  "helpUrl": ""
+},
+{
+  "type": "if_else",
+  "message0": "if %1 %2 else %3 %4",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "condition",
+      "check": "Boolean"
+    },
+    {
+      "type": "input_statement",
+      "name": "statement"
+    },
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_statement",
+      "name": "statement_else"
+    }
+  ],
+  "inputsInline": false,
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 90,
+  "tooltip": "Do some code if the condition is true, and some code if the condition is false",
+  "helpUrl": ""
+},
+{
+  "type": "while",
+  "message0": "while %1 %2",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "condition",
+      "check": "Boolean"
+    },
+    {
+      "type": "input_statement",
+      "name": "statement"
+    }
+  ],
+  "inputsInline": false,
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 90,
+  "tooltip": "Do some code while the condition is true",
+  "helpUrl": ""
+},
+{
+  "type": "until",
+  "message0": "until %1 %2",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "condition",
+      "check": "Boolean"
+    },
+    {
+      "type": "input_statement",
+      "name": "statement"
+    }
+  ],
+  "inputsInline": false,
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 90,
+  "tooltip": "Do some code while the condition is false",
+  "helpUrl": ""
+},
+{
+  "type": "repeat",
+  "message0": "repeat %1 times %2 %3",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "times",
+      "check": "Number"
+    },
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_statement",
+      "name": "statement"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 90,
+  "tooltip": "Do statement a number of times",
+  "helpUrl": ""
+},
+{
+  "type": "do_while",
+  "message0": "do %1 %2 while %3",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_statement",
+      "name": "statement"
+    },
+    {
+      "type": "input_value",
+      "name": "condition",
+      "check": "Boolean"
+    }
+  ],
+  "inputsInline": false,
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 90,
+  "tooltip": "Do some code, then check if the condition is true to do the code again",
+  "helpUrl": ""
+},
+{
+  "type": "forever",
+  "message0": "forever %1 %2",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_statement",
+      "name": "statement"
+    }
+  ],
+  "inputsInline": false,
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 90,
+  "tooltip": "Do this code forever (until break is used)",
+  "helpUrl": ""
+},
+{
+  "type": "wait",
+  "message0": "wait %1 seconds",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "seconds",
+      "check": "Number"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 90,
+  "tooltip": "Wait a few seconds. The value can be a decimal, too",
+  "helpUrl": ""
+},
+{
+  "type": "custom_code",
+  "message0": "Custom code: %1",
+  "args0": [
+    {
+      "type": "field_input",
+      "name": "code",
+      "text": "void(0)"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 270,
+  "tooltip": "If you know JavaScript, you can write custom code here",
+  "helpUrl": ""
+},
+{
+  "type": "custom_code_inline",
+  "message0": "Custom code: %1",
+  "args0": [
+    {
+      "type": "field_input",
+      "name": "code",
+      "text": "void(0)"
+    }
+  ],
+  "output": null,
+  "colour": 270,
+  "tooltip": "If you know JavaScript, you can write custom code here",
+  "helpUrl": ""
+},
+{
+  "type": "to_boolean",
+  "message0": "boolean of %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "value"
+    }
+  ],
+  "output": "Boolean",
+  "colour": 210,
+  "tooltip": "If value needs to be a boolean, convert it with this block",
+  "helpUrl": ""
+},
+{
+  "type": "iterator_set",
+  "message0": "Set iterator with index %1 to %2",
+  "args0": [
+    {
+      "type": "field_number",
+      "name": "index",
+      "value": 0,
+      "min": 0,
+      "precision": 1
+    },
+    {
+      "type": "input_value",
+      "name": "value",
+      "check": "Number"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 90,
+  "tooltip": "Usable only in repeat block. Set the iterator the repeat block is using",
+  "helpUrl": ""
+},
+{
+  "type": "iterator_get",
+  "message0": "iterator with index %1",
+  "args0": [
+    {
+      "type": "field_number",
+      "name": "index",
+      "value": 0,
+      "min": 0,
+      "precision": 1
+    }
+  ],
+  "output": "Number",
+  "colour": 90,
+  "tooltip": "Usable only in repeat block. Get the iterator the repeat block is using",
+  "helpUrl": ""
+},
+{
+  "type": "object_set",
+  "message0": "Set property %1 of %2 to %3",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "property",
+      "check": "String"
+    },
+    {
+      "type": "input_value",
+      "name": "object",
+      "check": "Object"
+    },
+    {
+      "type": "input_value",
+      "name": "value"
+    }
+  ],
+  "inputsInline": true,
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 45,
+  "tooltip": "Set an object's property",
+  "helpUrl": ""
+},
+{
+  "type": "object_new",
+  "message0": "empty object",
+  "output": "Object",
+  "colour": 45,
+  "tooltip": "Create an empty object",
+  "helpUrl": ""
+},
+{
+  "type": "object_get",
+  "message0": "property %1 of %2",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "property",
+      "check": "String"
+    },
+    {
+      "type": "input_value",
+      "name": "object",
+      "check": "Object"
+    }
+  ],
+  "inputsInline": true,
+  "output": null,
+  "colour": 45,
+  "tooltip": "Get an object's property",
+  "helpUrl": ""
+},
+{
+  "type": "object_remove",
+  "message0": "Remove property %1 of %2",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "property",
+      "check": "String"
+    },
+    {
+      "type": "input_value",
+      "name": "object",
+      "check": "Object"
+    }
+  ],
+  "inputsInline": true,
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 45,
+  "tooltip": "Remove property from an object",
+  "helpUrl": ""
+},
+{
+  "type": "array_new",
+  "message0": "array with %1 elements",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "length",
+      "check": "Number"
+    }
+  ],
+  "output": "Array",
+  "colour": 15,
+  "tooltip": "Create an array with pre-defined element slots",
+  "helpUrl": ""
+},
+{
+  "type": "array_set",
+  "message0": "Set element %1 of %2 to %3",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "index",
+      "check": "Number"
+    },
+    {
+      "type": "input_value",
+      "name": "array",
+      "check": "Array"
+    },
+    {
+      "type": "input_value",
+      "name": "value"
+    }
+  ],
+  "inputsInline": true,
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 15,
+  "tooltip": "Set an array element's value",
+  "helpUrl": ""
+},
+{
+  "type": "array_get",
+  "message0": "element %1 of %2",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "index",
+      "check": "Number"
+    },
+    {
+      "type": "input_value",
+      "name": "array",
+      "check": "Array"
+    }
+  ],
+  "inputsInline": true,
+  "output": null,
+  "colour": 15,
+  "tooltip": "Get an array element's value",
+  "helpUrl": ""
+},
+{
+  "type": "array_push",
+  "message0": "Add %1 at the end of %2",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "value"
+    },
+    {
+      "type": "input_value",
+      "name": "array",
+      "check": "Array"
+    }
+  ],
+  "inputsInline": true,
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 15,
+  "tooltip": "Add an element to the end of an array",
+  "helpUrl": ""
+},
+{
+  "type": "array_unshift",
+  "message0": "Add %1 at the beginning of %2",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "value"
+    },
+    {
+      "type": "input_value",
+      "name": "array",
+      "check": "Array"
+    }
+  ],
+  "inputsInline": true,
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 15,
+  "tooltip": "Add an element to the beginning of an array",
+  "helpUrl": ""
+},
+{
+  "type": "array_pop",
+  "message0": "Delete the last element of %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "array",
+      "check": "Array"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 15,
+  "tooltip": "Remove the last element of an array. The array will have less elements",
+  "helpUrl": ""
+},
+{
+  "type": "array_shift",
+  "message0": "Delete the first element of %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "array",
+      "check": "Array"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 15,
+  "tooltip": "Remove the first element of an array. The array will have less elements",
+  "helpUrl": ""
+},
+{
+  "type": "array_splice",
+  "message0": "Remove %1 elements at position %2 in the array %3 %4 add elements at index from %5",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "remove_elements_count",
+      "check": "Number"
+    },
+    {
+      "type": "input_value",
+      "name": "remove_index",
+      "check": "Number"
+    },
+    {
+      "type": "input_value",
+      "name": "array",
+      "check": "Array"
+    },
+    {
+      "type": "field_checkbox",
+      "name": "add",
+      "checked": false
+    },
+    {
+      "type": "input_value",
+      "name": "add_elements",
+      "check": "Array"
+    }
+  ],
+  "inputsInline": true,
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 15,
+  "tooltip": "Remove several elements in the array, and replace them with another array",
+  "helpUrl": ""
+},
+{
+  "type": "object_keys_values",
+  "message0": "property %1 of %2",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "keys_or_values",
+      "options": [
+        [
+          "names",
+          "keys"
+        ],
+        [
+          "values",
+          "values"
+        ]
+      ]
+    },
+    {
+      "type": "input_value",
+      "name": "object",
+      "check": "Object"
+    }
+  ],
+  "output": "Array",
+  "colour": 15,
+  "tooltip": "Get all property names or values of the object in an array",
+  "helpUrl": ""
+},
+{
+  "type": "array_slice",
+  "message0": "Slice of %1 start pos. %2 %3 end pos. %4",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "array",
+      "check": "Array"
+    },
+    {
+      "type": "input_value",
+      "name": "start",
+      "check": "Number"
+    },
+    {
+      "type": "field_checkbox",
+      "name": "end_enabled",
+      "checked": true
+    },
+    {
+      "type": "input_value",
+      "name": "end",
+      "check": "Number"
+    }
+  ],
+  "inputsInline": true,
+  "output": "Array",
+  "colour": 15,
+  "tooltip": "Like a substring of a string, a slice of an array",
+  "helpUrl": ""
+},
+{
+  "type": "for_array",
+  "message0": "for each value as %1 from %2 %3 %4",
+  "args0": [
+    {
+      "type": "field_variable",
+      "name": "iterator"
+    },
+    {
+      "type": "input_value",
+      "name": "array",
+      "check": "Array"
+    },
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_statement",
+      "name": "statement"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 90,
+  "tooltip": "Do a statement for every value in the array",
+  "helpUrl": ""
+},
+{
+  "type": "scene_background_set",
+  "message0": "Set the background to %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "background",
+      "check": [
+        "Texture",
+        "Color"
+      ]
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 300,
+  "tooltip": "Set the background of the scene to a color or a texture",
+  "helpUrl": ""
+},
+{
+  "type": "scene_background_get",
+  "message0": "current background",
+  "output": [
+    "Texture",
+    "Color"
+  ],
+  "colour": 300,
+  "tooltip": "Get the color or a texture that's the background of the scene",
+  "helpUrl": ""
+},
+{
+  "type": "scene_add",
+  "message0": "Add %1 to the scene",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "object",
+      "check": "Object3D"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 300,
+  "tooltip": "Add an object to the scene",
+  "helpUrl": ""
+},
+{
+  "type": "scene_remove",
+  "message0": "Remove %1 from the scene",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "object",
+      "check": "Object3D"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 300,
+  "tooltip": "Remove an object from the scene",
+  "helpUrl": ""
+},
+{
+  "type": "mesh_create",
+  "message0": "New object: %1 geometry %2 material %3",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "geometry",
+      "check": "Geometry"
+    },
+    {
+      "type": "input_value",
+      "name": "material",
+      "check": "Material"
+    }
+  ],
+  "output": "Object3D",
+  "colour": 355,
+  "tooltip": "Create an object from a geometry and a material",
+  "helpUrl": ""
+},
+{
+  "type": "geometry_box",
+  "message0": "Box geometry: %1 width %2 height %3 depth %4",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "width",
+      "check": "Number"
+    },
+    {
+      "type": "input_value",
+      "name": "height",
+      "check": "Number"
+    },
+    {
+      "type": "input_value",
+      "name": "depth",
+      "check": "Number"
+    }
+  ],
+  "output": "Geometry",
+  "colour": 345,
+  "tooltip": "Geometry is the shape of the object",
+  "helpUrl": ""
+},
+{
+  "type": "geometry_capsule",
+  "message0": "Capsule geometry: %1 radius %2 length %3",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "radius",
+      "check": "Number"
+    },
+    {
+      "type": "input_value",
+      "name": "length",
+      "check": "Number"
+    }
+  ],
+  "output": "Geometry",
+  "colour": 345,
+  "tooltip": "Geometry is the shape of the object",
+  "helpUrl": ""
+},
+{
+  "type": "geometry_circle",
+  "message0": "Circle geometry: %1 radius %2",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "radius",
+      "check": "Number"
+    }
+  ],
+  "output": "Geometry",
+  "colour": 345,
+  "tooltip": "Geometry is the shape of the object",
+  "helpUrl": ""
+},
+{
+  "type": "geometry_cone",
+  "message0": "Cone geometry: %1 radius %2 height %3",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "radius",
+      "check": "Number"
+    },
+    {
+      "type": "input_value",
+      "name": "height",
+      "check": "Number"
+    }
+  ],
+  "output": "Geometry",
+  "colour": 345,
+  "tooltip": "Geometry is the shape of the object",
+  "helpUrl": ""
+},
+{
+  "type": "geometry_prism",
+  "message0": "Prism geometry: %1 radius %2 height %3 segments %4",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "radius",
+      "check": "Number"
+    },
+    {
+      "type": "input_value",
+      "name": "height",
+      "check": "Number"
+    },
+    {
+      "type": "input_value",
+      "name": "segments",
+      "check": "Number"
+    }
+  ],
+  "output": "Geometry",
+  "colour": 345,
+  "tooltip": "Geometry is the shape of the object",
+  "helpUrl": ""
+},
+{
+  "type": "geometry_dodecahedron",
+  "message0": "Dodecahedron geometry: %1 radius %2",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "radius",
+      "check": "Number"
+    }
+  ],
+  "output": "Geometry",
+  "colour": 345,
+  "tooltip": "Geometry is the shape of the object",
+  "helpUrl": ""
+},
+{
+  "type": "geometry_sphere",
+  "message0": "Sphere geometry: %1 radius %2",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "radius",
+      "check": "Number"
+    }
+  ],
+  "output": "Geometry",
+  "colour": 345,
+  "tooltip": "Geometry is the shape of the object",
+  "helpUrl": ""
+},
+{
+  "type": "material_new",
+  "message0": "new %1 material %2 %3 color %4 %5 texture %6 wireframe %7 %8 transparent %9 %10 shininess %11 %12 specular color %13",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "type",
+      "options": [
+        [
+          "basic",
+          "Basic"
+        ],
+        [
+          "Phong",
+          "Phong"
+        ],
+        [
+          "Lambert",
+          "Lambert"
+        ],
+        [
+          "physically correct",
+          "Physical"
+        ],
+        [
+          "normal",
+          "Standard"
+        ],
+        [
+          "toon",
+          "Toon"
+        ]
+      ]
+    },
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "field_checkbox",
+      "name": "color_enabled",
+      "checked": true
+    },
+    {
+      "type": "input_value",
+      "name": "color",
+      "check": "Color"
+    },
+    {
+      "type": "field_checkbox",
+      "name": "texture_enabled",
+      "checked": false
+    },
+    {
+      "type": "input_value",
+      "name": "texture",
+      "check": "Texture"
+    },
+    {
+      "type": "field_checkbox",
+      "name": "wireframe",
+      "checked": false
+    },
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "field_checkbox",
+      "name": "transparent",
+      "checked": true
+    },
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "shininess",
+      "check": "Number"
+    },
+    {
+      "type": "field_checkbox",
+      "name": "specular_enabled",
+      "checked": true
+    },
+    {
+      "type": "input_value",
+      "name": "specular",
+      "check": "Color"
+    }
+  ],
+  "output": "Material",
+  "colour": 330,
+  "tooltip": "Material is the texture or outside of the object. It can use a color or a texture",
+  "helpUrl": ""
+},
+{
+  "type": "color_new_rgb",
+  "message0": "RGB color: %1 red %2 green %3 blue %4",
+  "args0": [
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "r",
+      "check": "Number"
+    },
+    {
+      "type": "input_value",
+      "name": "g",
+      "check": "Number"
+    },
+    {
+      "type": "input_value",
+      "name": "b",
+      "check": "Number"
+    }
+  ],
+  "output": "Color",
+  "colour": 285,
+  "tooltip": "Color is used for coloring the materials",
+  "helpUrl": ""
+},
+{
+  "type": "color_new_str",
+  "message0": "String color: %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "r",
+      "check": "String"
+    }
+  ],
+  "output": "Color",
+  "colour": 285,
+  "tooltip": "Color is used for coloring the materials",
+  "helpUrl": ""
+},
+{
+  "type": "color_new_hex",
+  "message0": "HEX color: %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "r",
+      "check": "Number"
+    }
+  ],
+  "output": "Color",
+  "colour": 285,
+  "tooltip": "Color is used for coloring the materials",
+  "helpUrl": ""
+},
+{
+  "type": "color_comparison",
+  "message0": "%1 = %2",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "color1",
+      "check": "Color"
+    },
+    {
+      "type": "input_value",
+      "name": "color2",
+      "check": "Color"
+    }
+  ],
+  "inputsInline": true,
+  "output": null,
+  "colour": 285,
+  "tooltip": "Compare two colors if they are the same",
+  "helpUrl": ""
+},
+{
+  "type": "color_lerp",
+  "message0": "Blend %1 with %2 alpha %3",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "color1",
+      "check": "Color"
+    },
+    {
+      "type": "input_value",
+      "name": "color2",
+      "check": "Color"
+    },
+    {
+      "type": "input_value",
+      "name": "alpha",
+      "check": "Number"
+    }
+  ],
+  "inputsInline": true,
+  "output": "Color",
+  "colour": 285,
+  "tooltip": "Blend this color with another color",
+  "helpUrl": ""
+},
+{
+  "type": "void",
+  "message0": "Void %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "statement"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 270,
+  "tooltip": "Convert an inline block to a statement block",
+  "helpUrl": ""
+},
+{
+  "type": "color_multiply",
+  "message0": "Multiply color %1 with scalar %2",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "color",
+      "check": "Color"
+    },
+    {
+      "type": "input_value",
+      "name": "scalar",
+      "check": "Number"
+    }
+  ],
+  "inputsInline": true,
+  "output": "Color",
+  "colour": 285,
+  "tooltip": "Take each value from RGB of the color and multiply it by the scalar",
+  "helpUrl": ""
+},
+{
+  "type": "color_convert_array",
+  "message0": "to array %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "color",
+      "check": "Color"
+    }
+  ],
+  "output": "Color",
+  "colour": 285,
+  "tooltip": "Take each value from RGB of the color and push it in an array",
+  "helpUrl": ""
+},
+{
+  "type": "color_get_r",
+  "message0": "red of %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "color",
+      "check": "Color"
+    }
+  ],
+  "output": "Number",
+  "colour": 285,
+  "tooltip": "Take the red value as a number from the color",
+  "helpUrl": ""
+},
+{
+  "type": "color_get_g",
+  "message0": "green of %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "color",
+      "check": "Color"
+    }
+  ],
+  "output": "Number",
+  "colour": 285,
+  "tooltip": "Take the green value as a number from the color",
+  "helpUrl": ""
+},
+{
+  "type": "color_get_b",
+  "message0": "blue of %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "color",
+      "check": "Color"
+    }
+  ],
+  "output": "Number",
+  "colour": 285,
+  "tooltip": "Take the blue value as a number from the color",
+  "helpUrl": ""
+},
+{
+  "type": "color_new_input",
+  "message0": "%1",
+  "args0": [
+    {
+      "type": "field_colour",
+      "name": "color",
+      "colour": "#000000"
+    }
+  ],
+  "output": null,
+  "colour": 285,
+  "tooltip": "Color is used for coloring the materials",
+  "helpUrl": ""
+},
+{
+  "type": "object3d_position_set",
+  "message0": "Move %1 to x: %2 y: %3 z: %4",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "object",
+      "check": "Object3D"
+    },
+    {
+      "type": "input_value",
+      "name": "x",
+      "check": "Number"
+    },
+    {
+      "type": "input_value",
+      "name": "y",
+      "check": "Number"
+    },
+    {
+      "type": "input_value",
+      "name": "z",
+      "check": "Number"
+    }
+  ],
+  "inputsInline": true,
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 355,
+  "tooltip": "Move the 3d object to coordinates",
+  "helpUrl": ""
+},
+{
+  "type": "object3d_position_set_x",
+  "message0": "Set x position of %1 to %2",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "object",
+      "check": "Object3D"
+    },
+    {
+      "type": "input_value",
+      "name": "value",
+      "check": "Number"
+    }
+  ],
+  "inputsInline": true,
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 355,
+  "tooltip": "Move the 3d object to coordinates",
+  "helpUrl": ""
+},
+{
+  "type": "object3d_position_set_y",
+  "message0": "Set y position of %1 to %2",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "object",
+      "check": "Object3D"
+    },
+    {
+      "type": "input_value",
+      "name": "value",
+      "check": "Number"
+    }
+  ],
+  "inputsInline": true,
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 355,
+  "tooltip": "Move the 3d object to coordinates",
+  "helpUrl": ""
+},
+{
+  "type": "object3d_position_set_z",
+  "message0": "Set z position of %1 to %2",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "object",
+      "check": "Object3D"
+    },
+    {
+      "type": "input_value",
+      "name": "value",
+      "check": "Number"
+    }
+  ],
+  "inputsInline": true,
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 355,
+  "tooltip": "Move the 3d object to coordinates",
+  "helpUrl": ""
+},
+{
+  "type": "object3d_position_get_x",
+  "message0": "x position of %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "object",
+      "check": "Object3D"
+    }
+  ],
+  "output": "Number",
+  "colour": 230,
+  "tooltip": "Get the coordinates of the 3d object",
+  "helpUrl": ""
+},
+{
+  "type": "object3d_position_get_y",
+  "message0": "y position of %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "object",
+      "check": "Object3D"
+    }
+  ],
+  "output": "Number",
+  "colour": 230,
+  "tooltip": "Get the coordinates of the 3d object",
+  "helpUrl": ""
+},
+{
+  "type": "object3d_position_get_z",
+  "message0": "z position of %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "object",
+      "check": "Object3D"
+    }
+  ],
+  "output": "Number",
+  "colour": 230,
+  "tooltip": "Get the coordinates of the 3d object",
+  "helpUrl": ""
+},
+{
+  "type": "object3d_position_get",
+  "message0": "position as object of %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "object",
+      "check": "Object3D"
+    }
+  ],
+  "output": "Object",
+  "colour": 45,
+  "tooltip": "Get the coordinates of the 3d object",
+  "helpUrl": ""
+},
+{
+  "type": "object3d_rotation_set",
+  "message0": "Rotate %1 to alpha: %2 beta: %3 gamma: %4",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "object",
+      "check": "Object3D"
+    },
+    {
+      "type": "input_value",
+      "name": "x",
+      "check": "Number"
+    },
+    {
+      "type": "input_value",
+      "name": "y",
+      "check": "Number"
+    },
+    {
+      "type": "input_value",
+      "name": "z",
+      "check": "Number"
+    }
+  ],
+  "inputsInline": true,
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 355,
+  "tooltip": "Rotate the 3d object with Euler angles in radians",
+  "helpUrl": ""
+},
+{
+  "type": "object3d_rotation_set_x",
+  "message0": "Set alpha rotation of %1 to %2",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "object",
+      "check": "Object3D"
+    },
+    {
+      "type": "input_value",
+      "name": "value",
+      "check": "Number"
+    }
+  ],
+  "inputsInline": true,
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 355,
+  "tooltip": "Rotate the 3d object with Euler angles in radians",
+  "helpUrl": ""
+},
+{
+  "type": "object3d_rotation_set_y",
+  "message0": "Set beta rotation of %1 to %2",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "object",
+      "check": "Object3D"
+    },
+    {
+      "type": "input_value",
+      "name": "value",
+      "check": "Number"
+    }
+  ],
+  "inputsInline": true,
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 355,
+  "tooltip": "Rotate the 3d object with Euler angles in radians",
+  "helpUrl": ""
+},
+{
+  "type": "object3d_rotation_set_z",
+  "message0": "Set gamma rotation of %1 to %2",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "object",
+      "check": "Object3D"
+    },
+    {
+      "type": "input_value",
+      "name": "value",
+      "check": "Number"
+    }
+  ],
+  "inputsInline": true,
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 355,
+  "tooltip": "Rotate the 3d object with Euler angles in radians",
+  "helpUrl": ""
+},
+{
+  "type": "object3d_rotation_get_x",
+  "message0": "alpha rotation of %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "object",
+      "check": "Object3D"
+    }
+  ],
+  "output": "Number",
+  "colour": 230,
+  "tooltip": "Get the rotation of the 3d object with Euler angles in radians",
+  "helpUrl": ""
+},
+{
+  "type": "object3d_rotation_get_y",
+  "message0": "beta rotation of %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "object",
+      "check": "Object3D"
+    }
+  ],
+  "output": "Number",
+  "colour": 230,
+  "tooltip": "Get the rotation of the 3d object with Euler angles in radians",
+  "helpUrl": ""
+},
+{
+  "type": "object3d_rotation_get_z",
+  "message0": "gamma rotation of %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "object",
+      "check": "Object3D"
+    }
+  ],
+  "output": "Number",
+  "colour": 230,
+  "tooltip": "Get the rotation of the 3d object with Euler angles in radians",
+  "helpUrl": ""
+},
+{
+  "type": "object3d_material_get",
+  "message0": "material of %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "object",
+      "check": "Object3D"
+    }
+  ],
+  "output": "Material",
+  "colour": 330,
+  "tooltip": "Get the 3d object's material",
+  "helpUrl": ""
+},
+{
+  "type": "object3d_geometry_get",
+  "message0": "geometry of %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "object",
+      "check": "Object3D"
+    }
+  ],
+  "output": "Geometry",
+  "colour": 345,
+  "tooltip": "Get the 3d object's geometry",
+  "helpUrl": ""
+},
+{
+  "type": "camera_get",
+  "message0": "projection camera",
+  "output": "Object3D",
+  "colour": 300,
+  "tooltip": "Get the camera the renderer is using as Object3D",
+  "helpUrl": ""
+},
+{
+  "type": "object3d_lookat",
+  "message0": "Make %1 look at %2",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "object",
+      "check": "Object3D"
+    },
+    {
+      "type": "input_value",
+      "name": "target",
+      "check": "Object3D"
+    }
+  ],
+  "inputsInline": true,
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 355,
+  "tooltip": "Make an object point towards another one",
+  "helpUrl": ""
+},
+{
+  "type": "null",
+  "message0": "%1",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "value_type",
+      "options": [
+        [
+          "null",
+          "null"
+        ],
+        [
+          "undefined",
+          "undefined"
+        ]
+      ]
+    }
+  ],
+  "output": null,
+  "colour": "#808080",
+  "tooltip": "Get a special null value",
+  "helpUrl": ""
+},
+{
+  "type": "typeof",
+  "message0": "type of %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "value"
+    }
+  ],
+  "output": "String",
+  "colour": 160,
+  "tooltip": "Get the type of the value as a string",
+  "helpUrl": ""
+},
+{
+  "type": "texture_new",
+  "message0": "new texture with image %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "url",
+      "check": "String"
+    }
+  ],
+  "output": "Texture",
+  "colour": 330,
+  "tooltip": "Create a new texture",
+  "helpUrl": ""
+},
+{
+  "type": "object3d_lookat_coordinates",
+  "message0": "Make %1 look at coordinates %2",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "object",
+      "check": "Object3D"
+    },
+    {
+      "type": "input_value",
+      "name": "coords",
+      "check": "Object"
+    }
+  ],
+  "inputsInline": true,
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 355,
+  "tooltip": "Make an object look at set coordinates",
+  "helpUrl": ""
+},
+{
+  "type": "function",
+  "message0": "Function with name %1 %2 async %3 %4",
+  "args0": [
+    {
+      "type": "field_input",
+      "name": "name",
+      "text": "anonymous"
+    },
+    {
+      "type": "field_checkbox",
+      "name": "async",
+      "checked": false
+    },
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_statement",
+      "name": "statement"
+    }
+  ],
+  "output": "Function",
+  "colour": 69,
+  "tooltip": "A function is a set of blocks that can be called whenever you want",
+  "helpUrl": ""
+},
+{
+  "type": "return",
+  "message0": "Return %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "value"
+    }
+  ],
+  "previousStatement": null,
+  "colour": 69,
+  "tooltip": "Used only in functions. Return a value",
+  "helpUrl": ""
+},
+{
+  "type": "return_undefined",
+  "message0": "Return",
+  "previousStatement": null,
+  "colour": 69,
+  "tooltip": "Used only in functions. Return undefined",
+  "helpUrl": ""
+},
+{
+  "type": "call_function",
+  "message0": "Call %1 %2 with parameters %3 %4 await",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "function",
+      "check": "Function"
+    },
+    {
+      "type": "field_checkbox",
+      "name": "params_enabled",
+      "checked": false
+    },
+    {
+      "type": "input_value",
+      "name": "params",
+      "check": "Array"
+    },
+    {
+      "type": "field_checkbox",
+      "name": "await",
+      "checked": false
+    }
+  ],
+  "inputsInline": true,
+  "output": null,
+  "colour": 69,
+  "tooltip": "Call a function, optionally with array of arguments",
+  "helpUrl": ""
+},
+{
+  "type": "function_arguments",
+  "message0": "arguments",
+  "output": "Array",
+  "colour": 15,
+  "tooltip": "Get the arguments of the function call",
+  "helpUrl": ""
+},
+{
+  "type": "light_new",
+  "message0": "New %1 light: %2 color %3 intensity %4",
+  "args0": [
+    {
+      "type": "field_dropdown",
+      "name": "type",
+      "options": [
+        [
+          "point",
+          "Point"
+        ],
+        [
+          "directional",
+          "Directional"
+        ],
+        [
+          "ambient",
+          "Ambient"
+        ],
+        [
+          "hemisphere",
+          "Hemisphere"
+        ],
+        [
+          "spot",
+          "Spot"
+        ]
+      ]
+    },
+    {
+      "type": "input_dummy"
+    },
+    {
+      "type": "input_value",
+      "name": "color",
+      "check": "Color"
+    },
+    {
+      "type": "input_value",
+      "name": "intensity",
+      "check": "Number"
+    }
+  ],
+  "output": "Object3D",
+  "colour": 355,
+  "tooltip": "Create a new light source. Does not work with some materials",
+  "helpUrl": ""
+},
+{
+  "type": "camera_fov_set",
+  "message0": "Set camera FOV to %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "value",
+      "check": "Number"
+    }
+  ],
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 300,
+  "tooltip": "Set the field of view on the camera",
+  "helpUrl": ""
+},
+{
+  "type": "camera_fov_get",
+  "message0": "camera FOV",
+  "output": "Number",
+  "colour": 300,
+  "tooltip": "Get the field of view on the camera",
+  "helpUrl": ""
+},
+{
+  "type": "clone_three_object",
+  "message0": "clone of %1",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "object",
+      "check": [
+        "Object3D",
+        "Geometry",
+        "Material"
+      ]
+    }
+  ],
+  "output": [
+    "Object3D",
+    "Geometry",
+    "Material"
+  ],
+  "colour": 300,
+  "tooltip": "Clone a THREE.JS object",
+  "helpUrl": ""
+},
+{
+  "type": "object3d_shadow_cast_set",
+  "message0": "Set casting shadow of %1 to %2",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "object",
+      "check": "Object3D"
+    },
+    {
+      "type": "input_value",
+      "name": "value",
+      "check": "Boolean"
+    }
+  ],
+  "inputsInline": true,
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 355,
+  "tooltip": "Set if the object can cast shadow",
+  "helpUrl": ""
+},
+{
+  "type": "object3d_shadow_receive_set",
+  "message0": "Set receiving shadow of %1 to %2",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "object",
+      "check": "Object3D"
+    },
+    {
+      "type": "input_value",
+      "name": "value",
+      "check": "Boolean"
+    }
+  ],
+  "inputsInline": true,
+  "previousStatement": null,
+  "nextStatement": null,
+  "colour": 355,
+  "tooltip": "Set if the object can receive shadow",
+  "helpUrl": ""
+},
+{
+  "type": "object3d_shadow_cast_get",
+  "message0": "can %1 cast shadow",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "object",
+      "check": "Object3D"
+    }
+  ],
+  "output": "Boolean",
+  "colour": 210,
+  "tooltip": "Get if the object can cast shadow",
+  "helpUrl": ""
+},
+{
+  "type": "object3d_shadow_receive_get",
+  "message0": "can %1 receive shadow",
+  "args0": [
+    {
+      "type": "input_value",
+      "name": "object",
+      "check": "Object3D"
+    }
+  ],
+  "output": "Boolean",
+  "colour": 210,
+  "tooltip": "Get if the object can receive shadow",
+  "helpUrl": ""
+}]

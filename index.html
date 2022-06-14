@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html prefix="og: https://ogp.me/ns/website#">
+<head prefix="og: https://ogp.me/ns/website#">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>MatrixBite v1.0</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" type="image/png" href="assets/logo.png">
+	<script src="https://unpkg.com/blockly/blockly.min.js"></script>
+	<script type="text/javascript" src="assets/block_definitions.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.3/beautify.js"></script>
+	<script src="https://threejs.org/build/three.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+	<!-- Open Graph -->
+	<meta property="og:title" content="MatrixBite - Scratch 3D">
+	<meta property="og:description" content="Create 3D programs with blocks">
+	<meta property="og:image:url" content="assets/logo.png">
+	<meta property="og:image:type" content="image/png">
+	<meta property="og:image:alt" content="MatrixBite Logo">
+	<meta property="og:url" content="https://entityplantt.github.io/host/html/MatrixBite/">
+</head>
+<body class="nomargin">
+	<div id="toolbar">
+		<h1 class="inline text-primary nomargin">MatrixBite</h1>
+		<button class="marginleft" style="--color: var(--theme-color-primary)" onclick="save()">Save</button>
+		<button class="marginleft" style="--color: var(--theme-color-primary)" onclick="load()">Load</button>
+	</div>
+	<div id="editor-overlay"></div>
+	<div id="editor"></div>
+	<img src="https://developers.google.com/blockly/images/logos/logo_built_on_knockout.png" id="attribution" draggable="false">
+	<div id="preview">
+		<button id="switch-tab-code" class="switch-tab selected" style="--color: var(--theme-color-secondary)" onclick="switchToTab('code')">Code</button>
+		<button id="switch-tab-run" class="switch-tab marginleft" style="--color: var(--theme-color-secondary)" onclick="switchToTab('run')">Preview</button>
+		<button style="--color: var(--theme-color-primary)" class="marginleft" onclick="run(this)">Run</button>
+		<div class="tab selected" id="tab-code">
+			<pre><code></code></pre>
+		</div>
+		<div class="tab" id="tab-run">
+			<canvas id="preview-canvas"></canvas>
+		</div>
+	</div>
+</body>
+</html>
